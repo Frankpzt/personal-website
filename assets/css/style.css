@@ -1,0 +1,25 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  background-color: #cccce0;
+}
+
+.body__desktop {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.navbar__desktop {
+  list-style: none;
+  margin-top: 3%;
+}
+.navbar__desktop li {
+  display: flex;
+  justify-content: space-around;
+}
+.navbar__desktop li ul {
+  font-family: "Roboto Slab", serif;
+  font-weight: 1000;
+}
+
+/*# sourceMappingURL=style.css.map */
