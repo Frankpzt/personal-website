@@ -1,0 +1,34 @@
+// desktop configurations:
+$navbarMarginTopDesktop : 3%;
+$navbarFontWeightDesktop : 1000;
+$bodyBackgroundColorDesktop : rgb(204, 204, 224);
+//_________________________________________________
+
+* {
+    margin: 0%;
+    padding: 0%;
+    background-color: $bodyBackgroundColorDesktop;
+}
+
+
+.body__desktop {
+    margin-left: 20%;
+    margin-right: 20%;
+    
+}
+
+.navbar__desktop {
+
+    list-style: none;
+    margin-top: $navbarMarginTopDesktop;
+
+    li {
+        display: flex;
+        justify-content: space-around;
+
+        ul {
+            font-family: 'Roboto Slab', serif;
+            font-weight: $navbarFontWeightDesktop;
+        }
+    }
+}
