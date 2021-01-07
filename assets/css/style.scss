@@ -1,34 +1,260 @@
-// desktop configurations:
-$navbarMarginTopDesktop : 3%;
+// ***desktop configurations***
+// *1.0 general:
+$bodyBackgroundColorDesktop : rgba(153, 131, 6, 0.5);
+// *2.0 navbar:
 $navbarFontWeightDesktop : 1000;
-$bodyBackgroundColorDesktop : rgb(204, 204, 224);
+$fontSize : 150%;
+$fontColor :  rgba(63, 60, 60, 0.815);
+$hoverColor : rgb(0, 0, 0);
+// *3.0 home:
+$homeCardWrapperWidth : 100%;
+$homeCardWrapperHeight : 740px;
+$homeCardWrapperMarginTop : 2em;
+// $homeCardWrapperBg : gray;
 //_________________________________________________
 
 * {
     margin: 0%;
     padding: 0%;
-    background-color: $bodyBackgroundColorDesktop;
+}
+
+.body__default {
+    background: linear-gradient(0deg, rgba(198,140,40,0.6334908963585435) 0%, rgba(141,184,94,1) 32%, rgba(255,255,255,1) 100%, rgba(255,255,255,1) 100%, rgba(250,248,243,0.07046568627450978) 100%, rgba(0,0,0,0.8827906162464986) 100%);
+    background-repeat: no-repeat;
 }
 
 
 .body__desktop {
     margin-left: 20%;
     margin-right: 20%;
+    display: flex;
+    flex-direction: column;
+
+    #resumeButton {
+        right: 90%;
+        position: absolute;
+    }
+
+    .navbar__desktop {
+        padding: 2em;
+        background-color: wheat;
+        list-style: none;
+        li {
+            display: flex;
+            justify-content: space-around;
+            ul {
+                font-family: 'Roboto Slab', serif;
+                font-weight: $navbarFontWeightDesktop;
+                transition: transform 1.0s;
+                a {
+                    text-decoration: none;
+                    font-size: $fontSize;
+                    color: $fontColor;
+                    transition: color 1s;
+                }
+                a:hover {
+                    color: $hoverColor;
+                }
     
-}
-
-.navbar__desktop {
-
-    list-style: none;
-    margin-top: $navbarMarginTopDesktop;
-
-    li {
-        display: flex;
-        justify-content: space-around;
-
-        ul {
-            font-family: 'Roboto Slab', serif;
-            font-weight: $navbarFontWeightDesktop;
+                a:visited {
+                    background: red; 
+                }
+            }
+            ul:hover {
+                transform: scale(1.5);
+                text-shadow: 5px 3px 5px grey;
+            }
         }
     }
+
+    .Home {
+        margin-top: 6em;
+        position: relative;
+
+        .home__card-wrapper {
+            background-color: wheat;
+            border-radius: 2%;
+            display: flex;
+            justify-content: space-around;
+
+            .home__card-photo {
+                img {
+                    position: absolute;
+                    top: 20%;
+                    width: auto;
+                    height: 350px;
+                    transition: transform 1s;
+                }
+
+                img:hover {
+                    transform: translateY(-20px);
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);    
+                }
+            }
+            .home__card-contents{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .home__card-aboutMe {
+                    transition: transform 1s;
+                    flex:1;
+                    background-color: antiquewhite;
+                    .aboutMe__intro {
+                        font-family: 'Redressed', cursive;
+                        padding-top: 1em;
+                        display: flex;
+                        flex-direction: column;
+                        width: 400px;
+                        // position: absolute;
+                        h3 {
+                            font-size: 40px;
+                            text-align: center;
+                            .aboutMe__textColor-Me {
+                                color: rgb(255, 175, 1);
+                            }
+                        }
+                        p {
+                            font-size: 20px;
+                            padding: 1em;
+                            display: block;
+                            text-align: justify;
+                        }
+                    }
+
+                    .aboutMe__contact {
+                        
+                        padding: 2em;
+                        .aboutMe__contact-ul {
+                            list-style: none;
+
+                            .aboutMe__contact-li {
+                                display: flex;
+                                justify-content: space-between;
+                                h3 {
+                                    color: rgb(255, 94, 1);
+                                    font-weight: 300;
+                                }
+
+                            }
+                        }
+                    }
+                    
+                }
+
+                .home__card-aboutMe:hover {
+                    transform:translateX(-40px);
+                }
+
+                .home__card-myInfo{
+                    flex:2;
+                    display: flex;
+                    flex-direction: column;
+                    background-color: rgba(0, 0, 0, 0.096);
+                    transition: transform 1s;
+                    hr {
+                        border-top: 3px dashed rgb(82, 68, 68);
+                    }
+
+                    .myInfo__fullName {
+                        font-family: 'Redressed', cursive;
+                        text-align: center;
+                        font-size: 3em;
+                        width: 400px;
+                        margin-bottom: 10px;
+                    }
+
+                    .myInfo__socialMedia {
+                        margin-left: 5em;
+                        margin-right: 5em;
+                        margin-bottom: 20px;
+                        .myInfo__socialMedia-ul {
+                            list-style: none;
+                            display: flex;
+                            justify-content: space-evenly;
+                            .myInfo__socialMedia-li {
+                                align-self: center;
+                                padding: 0.3em;
+                                background-color:  wheat;
+                                border-radius: 50%;
+                            }
+                            .myInfo__socialMedia-li:hover {
+                                /* Start the shake animation and make the animation last for 0.5 seconds */
+                                animation: shake 0.5s;
+                                animation-iteration-count: 1;
+
+                            }
+                            @keyframes shake {
+                                0% { transform: translate(1px, 4px)  }
+                                10% { transform: translate(-1px, 4px) }
+                                20% { transform: translate(3px, 4px) }
+                                30% { transform: translate(-3px, 4px)  }
+                                40% { transform: translate(1px, 4px)  }
+                                50% { transform: translate(-1px, 4px)  }
+                                }
+                        }
+                    }
+                    .myInfo__occupations {
+                        align-self: center;
+                        display: flex;
+                        flex-direction: column;
+                        text-align: justify;
+                        list-style: none;
+                        ul {
+                            font-size: 30px;
+                            font-family: 'Redressed', cursive;
+                            text-align: justify;
+                            line-height: 2em;
+                            display: flex;
+                            p {
+                                padding-left: 0.8em;
+                            }
+                        }
+                    }
+                }
+                .home__card-myInfo:hover {
+                    transform: translateX(40px); 
+                }
+
+            }    
+
+        }
+    
+    }
+
+    .Resume {
+        border-radius: 2%;
+        text-align: center;
+        margin-top: 6em;
+        background: rgb(192, 142, 142);
+    }
+
+    .Projects {
+        // padding: 1em;
+        text-align: center;
+        margin-top: 6em;
+        background: rgb(27, 149, 88);
+    }
+
+    .Blog {
+        // padding: 1em;
+        text-align: center;
+        margin-top: 6em;
+        background: rgb(24, 97, 165);
+    }
+
+    .contactMe {
+        // padding: 1em;
+        text-align: center;
+        margin-top: 6em;
+        background: rgb(145, 61, 214);
+    }
+
+    .desktop-footer {
+        text-align: center;
+        background-color: antiquewhite;
+        padding: 1em;
+    }
+    
+
 }
+

@@ -1,25 +1,224 @@
 * {
   margin: 0%;
   padding: 0%;
-  background-color: #cccce0;
+}
+
+.body__default {
+  background: linear-gradient(0deg, rgba(198, 140, 40, 0.6334908964) 0%, #8db85e 32%, white 100%, white 100%, rgba(250, 248, 243, 0.0704656863) 100%, rgba(0, 0, 0, 0.8827906162) 100%);
+  background-repeat: no-repeat;
 }
 
 .body__desktop {
   margin-left: 20%;
   margin-right: 20%;
+  display: flex;
+  flex-direction: column;
 }
-
-.navbar__desktop {
+.body__desktop #resumeButton {
+  right: 90%;
+  position: absolute;
+}
+.body__desktop .navbar__desktop {
+  padding: 2em;
+  background-color: wheat;
   list-style: none;
-  margin-top: 3%;
 }
-.navbar__desktop li {
+.body__desktop .navbar__desktop li {
   display: flex;
   justify-content: space-around;
 }
-.navbar__desktop li ul {
+.body__desktop .navbar__desktop li ul {
   font-family: "Roboto Slab", serif;
   font-weight: 1000;
+  transition: transform 1s;
+}
+.body__desktop .navbar__desktop li ul a {
+  text-decoration: none;
+  font-size: 150%;
+  color: rgba(63, 60, 60, 0.815);
+  transition: color 1s;
+}
+.body__desktop .navbar__desktop li ul a:hover {
+  color: black;
+}
+.body__desktop .navbar__desktop li ul a:visited {
+  background: red;
+}
+.body__desktop .navbar__desktop li ul:hover {
+  transform: scale(1.5);
+  text-shadow: 5px 3px 5px grey;
+}
+.body__desktop .Home {
+  margin-top: 6em;
+  position: relative;
+}
+.body__desktop .Home .home__card-wrapper {
+  background-color: wheat;
+  border-radius: 2%;
+  display: flex;
+  justify-content: space-around;
+}
+.body__desktop .Home .home__card-wrapper .home__card-photo img {
+  position: absolute;
+  top: 20%;
+  width: auto;
+  height: 350px;
+  transition: transform 1s;
+}
+.body__desktop .Home .home__card-wrapper .home__card-photo img:hover {
+  transform: translateY(-20px);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe {
+  transition: transform 1s;
+  flex: 1;
+  background-color: antiquewhite;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro {
+  font-family: "Redressed", cursive;
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro h3 {
+  font-size: 40px;
+  text-align: center;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro h3 .aboutMe__textColor-Me {
+  color: #ffaf01;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro p {
+  font-size: 20px;
+  padding: 1em;
+  display: block;
+  text-align: justify;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact {
+  padding: 2em;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul {
+  list-style: none;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul .aboutMe__contact-li {
+  display: flex;
+  justify-content: space-between;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul .aboutMe__contact-li h3 {
+  color: #ff5e01;
+  font-weight: 300;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe:hover {
+  transform: translateX(-40px);
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.096);
+  transition: transform 1s;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo hr {
+  border-top: 3px dashed #524444;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__fullName {
+  font-family: "Redressed", cursive;
+  text-align: center;
+  font-size: 3em;
+  width: 400px;
+  margin-bottom: 10px;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia {
+  margin-left: 5em;
+  margin-right: 5em;
+  margin-bottom: 20px;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul .myInfo__socialMedia-li {
+  align-self: center;
+  padding: 0.3em;
+  background-color: wheat;
+  border-radius: 50%;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul .myInfo__socialMedia-li:hover {
+  /* Start the shake animation and make the animation last for 0.5 seconds */
+  animation: shake 0.5s;
+  animation-iteration-count: 1;
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 4px);
+  }
+  10% {
+    transform: translate(-1px, 4px);
+  }
+  20% {
+    transform: translate(3px, 4px);
+  }
+  30% {
+    transform: translate(-3px, 4px);
+  }
+  40% {
+    transform: translate(1px, 4px);
+  }
+  50% {
+    transform: translate(-1px, 4px);
+  }
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__occupations {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  text-align: justify;
+  list-style: none;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__occupations ul {
+  font-size: 30px;
+  font-family: "Redressed", cursive;
+  text-align: justify;
+  line-height: 2em;
+  display: flex;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__occupations ul p {
+  padding-left: 0.8em;
+}
+.body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo:hover {
+  transform: translateX(40px);
+}
+.body__desktop .Resume {
+  border-radius: 2%;
+  text-align: center;
+  margin-top: 6em;
+  background: #c08e8e;
+}
+.body__desktop .Projects {
+  text-align: center;
+  margin-top: 6em;
+  background: #1b9558;
+}
+.body__desktop .Blog {
+  text-align: center;
+  margin-top: 6em;
+  background: #1861a5;
+}
+.body__desktop .contactMe {
+  text-align: center;
+  margin-top: 6em;
+  background: #913dd6;
+}
+.body__desktop .desktop-footer {
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 1em;
 }
 
 /*# sourceMappingURL=style.css.map */
