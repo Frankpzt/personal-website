@@ -49,51 +49,43 @@ $homeCardWrapperMarginTop : 2em;
                 margin: 3em;
                 font-family: 'Roboto Slab', serif;
                 font-weight: $navbarFontWeightDesktop;
-                transition: transform 1.0s;
-
                 a {
                     text-decoration: none;
                     font-size: $fontSize;
                     color: $fontColor;
                     transition: color 1s;
+                    transition: transform 1.0s;
+
+                    h2 {
+                        position: absolute;
+                        top: 40px;
+                        font-size: 15px;
+                    }
+    
+                    #nav__blog-text {
+                        position: absolute;
+                        left: 5px;
+                    }
+    
+                    #nav__contactMe-text {
+                        position: absolute;
+                        left: 0px;
+                        margin-right: 2em;
+                    }
+    
+                    #nav__projects-text {
+                        position: absolute;
+                        left: -3px;
+                    }
                 }
 
-                a:hover {
+                .active-pageIndicator, a:hover {
                     color: $hoverColor;
+                    border-radius: 20%;
+                    background-color: rgba(59, 58, 53, 0.041);
+                    transform: scale(1.5);
+                    text-shadow: 5px 3px 5px rgba(128, 128, 128, 0.541);
                 }
-
-                a:visited {
-                    background: red;
-                }
-
-                h2 {
-                    position: absolute;
-                    top: 40px;
-                    font-size: 15px;
-                }
-
-                #nav__blog-text {
-                    position: absolute;
-                    left: 5px;
-                }
-
-                #nav__contactMe-text {
-                    position: absolute;
-                    left: 0px;
-                    margin-right: 2em;
-                }
-
-                #nav__projects-text {
-                    position: absolute;
-                    left: -3px;
-                }
-            }
-
-            ul:hover {
-                border-radius: 20%;
-                background-color: rgba(59, 58, 53, 0.041);
-                transform: scale(1.5);
-                text-shadow: 5px 3px 5px rgba(128, 128, 128, 0.541);
             }
         }
     }

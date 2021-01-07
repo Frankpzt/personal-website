@@ -33,39 +33,34 @@
   margin: 3em;
   font-family: "Roboto Slab", serif;
   font-weight: 1000;
-  transition: transform 1s;
 }
 .body__desktop .navbar__desktop li ul a {
   text-decoration: none;
   font-size: 150%;
   color: rgba(63, 60, 60, 0.815);
   transition: color 1s;
+  transition: transform 1s;
 }
-.body__desktop .navbar__desktop li ul a:hover {
-  color: black;
-}
-.body__desktop .navbar__desktop li ul a:visited {
-  background: red;
-}
-.body__desktop .navbar__desktop li ul h2 {
+.body__desktop .navbar__desktop li ul a h2 {
   position: absolute;
   top: 40px;
   font-size: 15px;
 }
-.body__desktop .navbar__desktop li ul #nav__blog-text {
+.body__desktop .navbar__desktop li ul a #nav__blog-text {
   position: absolute;
   left: 5px;
 }
-.body__desktop .navbar__desktop li ul #nav__contactMe-text {
+.body__desktop .navbar__desktop li ul a #nav__contactMe-text {
   position: absolute;
   left: 0px;
   margin-right: 2em;
 }
-.body__desktop .navbar__desktop li ul #nav__projects-text {
+.body__desktop .navbar__desktop li ul a #nav__projects-text {
   position: absolute;
   left: -3px;
 }
-.body__desktop .navbar__desktop li ul:hover {
+.body__desktop .navbar__desktop li ul .active-pageIndicator, .body__desktop .navbar__desktop li ul a:hover {
+  color: black;
   border-radius: 20%;
   background-color: rgba(59, 58, 53, 0.041);
   transform: scale(1.5);
