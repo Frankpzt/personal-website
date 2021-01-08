@@ -28,95 +28,108 @@ new fullpage('#fullpage', {
     direction: (String) it will take the values up or down depending on the scrolling direction.
     */
     onLeave: function (origin, destination, direction) {
-        var leavingSection = this;
-        //the following if statements handle the animation of the navBar, which ensures the animation behaves properly.
-        //indices correspond to 'sections' which are objects defined by fullpage.js.
-        if (origin.index == 0 && direction == 'down') {
-            if (destination.index == 2 || destination.index == 3 || destination.index == 4) {
-                return
-            }
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('resumeButton').classList.add('active-pageIndicator')
-        } else if (origin.index == 1 && direction == 'down') {
-            if (destination.index == 3 || destination.index == 4) {
-                return
-            }
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('projectsButton').classList.add('active-pageIndicator')
-
-        } else if (origin.index == 2 && direction == 'down') {
-            if (destination.index == 4) {
-                return
-            }
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('blogButton').classList.add('active-pageIndicator')
-
-        } else if (origin.index == 3 && direction == 'down') {
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('contactMeButton').classList.add('active-pageIndicator')
-
-        } else if (origin.index == 0 && direction == 'up') {
+        var leavingSection = this
+        if (Math.abs(origin.index - destination.index) > 1) {
             return
-
-        } else if (origin.index == 1 && direction == 'up') {
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('homeButton').classList.add('active-pageIndicator')
-
-        } else if (origin.index == 2 && direction == 'up') {
-            if (destination.index == 0) {
-                return
-            }
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('resumeButton').classList.add('active-pageIndicator')
-
-        } else if (origin.index == 3 && direction == 'up') {
-            if (destination.index == 1 || destination.index == 0) {
-                return
-            }
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('projectsButton').classList.add('active-pageIndicator')
-
-
-        } else if (origin.index == 4 && direction == 'up') {
-            if (destination.index == 2 || destination.index == 1 || destination.index == 0) {
-                return
-            }
-            let otherTags = document.getElementsByTagName('a')
-            let length = otherTags.length
-            for (let i = 0; i < length; i++) {
-                pageIndicatorRemove(otherTags[i])
-            }
-            document.getElementById('blogButton').classList.add('active-pageIndicator')
         }
+        var sections = new Array("homeButton", "resumeButton", "projectsButton", "blogButton", "contactMeButton")
+        let otherTags = document.getElementsByTagName('a')
+        let length = otherTags.length        
+        for (let i = 0; i < length; i++) {
+            pageIndicatorRemove(otherTags[i])
+        }
+        document.getElementById(sections[destination.index]).classList.add('active-pageIndicator')        
     }
+    // onLeave: function (origin, destination, direction) {
+    //     var leavingSection = this;
+    //     //the following if statements handle the animation of the navBar, which ensures the animation behaves properly.
+    //     //indices correspond to 'sections' which are objects defined by fullpage.js.
+    //     if (origin.index == 0 && direction == 'down') {
+    //         if (destination.index == 2 || destination.index == 3 || destination.index == 4) {
+    //             return
+    //         }
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('resumeButton').classList.add('active-pageIndicator')
+    //     } else if (origin.index == 1 && direction == 'down') {
+    //         if (destination.index == 3 || destination.index == 4) {
+    //             return
+    //         }
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('projectsButton').classList.add('active-pageIndicator')
+
+    //     } else if (origin.index == 2 && direction == 'down') {
+    //         if (destination.index == 4) {
+    //             return
+    //         }
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('blogButton').classList.add('active-pageIndicator')
+
+    //     } else if (origin.index == 3 && direction == 'down') {
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('contactMeButton').classList.add('active-pageIndicator')
+
+    //     } else if (origin.index == 0 && direction == 'up') {
+    //         alert("ok！")
+
+    //     } else if (origin.index == 1 && direction == 'up') {
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('homeButton').classList.add('active-pageIndicator')
+
+    //     } else if (origin.index == 2 && direction == 'up') {
+    //         if (destination.index == 0) {
+    //             return
+    //         }
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('resumeButton').classList.add('active-pageIndicator')
+
+    //     } else if (origin.index == 3 && direction == 'up') {
+    //         if (destination.index == 1 || destination.index == 0) {
+    //             return
+    //         }
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('projectsButton').classList.add('active-pageIndicator')
+
+
+    //     } else if (origin.index == 4 && direction == 'up') {
+    //         if (destination.index == 2 || destination.index == 1 || destination.index == 0) {
+    //             return
+    //         }
+    //         let otherTags = document.getElementsByTagName('a')
+    //         let length = otherTags.length
+    //         for (let i = 0; i < length; i++) {
+    //             pageIndicatorRemove(otherTags[i])
+    //         }
+    //         document.getElementById('blogButton').classList.add('active-pageIndicator')
+    //     }
+    // }
 })
 
 /*A helper method to remove element's 'active-pageIndicator' class */
