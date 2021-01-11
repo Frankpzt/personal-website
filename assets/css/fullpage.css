@@ -73,13 +73,31 @@ html.fp-enabled,
 .fp-controlArrow.fp-prev {
     left: 15px;
     width: 0;
-    border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-width: 18.5px 24px 18.5px 0;
+    border-color: transparent rgb(183, 190, 182) transparent transparent;
 }
+@media only screen and (max-width: 375px) {
+    .fp-controlArrow.fp-prev {
+        display: none;
+    }
+  }
+.fp-controlArrow.fp-prev:active {
+    background-color: rgba(101, 102, 104, 0.185);
+    border-radius: 50%;
+}
+@media only screen and (max-width: 375px) {
+    .fp-controlArrow.fp-next {
+        display: none;
+    }
+  }
 .fp-controlArrow.fp-next {
     right: 15px;
-    border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    border-width: 18.5px 0 18.5px 24px;
+    border-color: transparent transparent transparent rgb(183, 190, 182);
+}
+.fp-controlArrow.fp-next:active {
+    background-color: rgba(101, 102, 104, 0.185);
+    border-radius: 50%;
 }
 .fp-scrollable {
     overflow: hidden;

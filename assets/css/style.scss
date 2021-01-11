@@ -1,6 +1,6 @@
 // ***desktop configurations***
 // *1.0 general:
-$bodyBackgroundColorDesktop : rgba(153, 131, 6, 0.5);
+$bodyBackgroundColorDesktop : rgba(156, 134, 11, 0.5);
 // *2.0 navbar:
 $navbarFontWeightDesktop : 1000;
 $fontSize : 150%;
@@ -18,6 +18,31 @@ $homeCardWrapperMarginTop : 2em;
     padding: 0%;
 }
 
+$S: 375px;
+$M: 992px;
+$L: 1200px;
+
+@mixin MQ($canvas) {
+
+    @if $canvas==S {
+        @media only screen and (min-width: $S) {
+            @content;
+        }
+    }
+
+    @else if $canvas==M {
+        @media only screen and (min-width: $M) {
+            @content;
+        }
+    }
+
+    @else if $canvas==L {
+        @media only screen and (min-width:$L) {
+            @content;
+        }
+    }
+}
+
 .body__default {
     background: linear-gradient(0deg, rgba(198, 140, 40, 0.6334908963585435) 0%, rgba(141, 184, 94, 1) 32%, rgba(255, 255, 255, 1) 100%, rgba(255, 255, 255, 1) 100%, rgba(250, 248, 243, 0.07046568627450978) 100%, rgba(0, 0, 0, 0.8827906162464986) 100%);
     background-repeat: no-repeat;
@@ -25,124 +50,522 @@ $homeCardWrapperMarginTop : 2em;
 
 
 .body__desktop {
-    margin-left: 12%;
+    margin-left: 10%;
     margin-right: 5%;
     display: flex;
     flex-direction: column;
 
-    .navbar__desktop {
-        position: absolute;
-        left: 20px;
-        top: 10%;
-        padding: 1em;
-        list-style: none;
+    .navbar__mobile {
+        @include MQ(L) {
+            display: none;
+        }
 
-        li {
+        ul {
             display: flex;
             flex-direction: column;
-            justify-content: space-around;
+            position: fixed;
+            top: 4%;
+            left: 93%;
+            list-style: none;
 
-            ul {
-                position: relative;
-                display: flex;
-                flex-direction: column;
-                margin: 3em;
-                font-family: 'Roboto Slab', serif;
-                font-weight: $navbarFontWeightDesktop;
+            li {
+                margin: 5px;
+
                 a {
                     text-decoration: none;
-                    font-size: $fontSize;
-                    color: $fontColor;
-                    transition: color 1s;
-                    transition: transform 1.0s;
 
                     h2 {
-                        position: absolute;
-                        top: 40px;
-                        font-size: 15px;
-                    }
-    
-                    #nav__blog-text {
-                        position: absolute;
-                        left: 5px;
-                    }
-    
-                    #nav__contactMe-text {
-                        position: absolute;
-                        left: 0px;
-                        margin-right: 2em;
-                    }
-    
-                    #nav__projects-text {
-                        position: absolute;
-                        left: -3px;
+                        display: none;
                     }
                 }
 
-                .active-pageIndicator, a:hover {
-                    color: $hoverColor;
-                    border-radius: 20%;
-                    background-color: rgba(59, 58, 53, 0.041);
-                    transform: scale(1.5);
-                    text-shadow: 5px 3px 5px rgba(128, 128, 128, 0.541);
+                transition: transform 1s;
+            }
+
+            li:hover {
+                background-color: rgba(138, 130, 130, 0.26);
+                transform: scale(1.2);
+            }
+        }
+
+
+    }
+
+    .navbar__desktop {
+        @include MQ(S) {
+            display: none;
+        }
+
+        @include MQ(L) {
+            display: block;
+            position: absolute;
+            left: 20px;
+            top: 10%;
+            padding: 1em;
+            list-style: none;
+
+            ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+
+                li {
+                    position: relative;
+                    display: flex;
+                    flex-direction: column;
+                    margin: 3em;
+                    font-family: 'Roboto Slab', serif;
+                    font-weight: $navbarFontWeightDesktop;
+
+                    a {
+                        .svg-desktop {
+                            display: block;
+                        }
+
+                        .svg-mobile {
+                            display: none;
+                        }
+
+                        text-decoration: none;
+                        font-size: $fontSize;
+                        color: $fontColor;
+                        transition: color 1s;
+                        transition: transform 1.0s;
+
+                        h2 {
+                            display: block;
+                            position: absolute;
+                            top: 40px;
+                            font-size: 15px;
+                        }
+
+                        #nav__blog-text {
+                            position: absolute;
+                            left: 5px;
+                        }
+
+                        #nav__contactMe-text {
+                            position: absolute;
+                            left: -3px;
+                        }
+
+                        #nav__projects-text {
+                            position: absolute;
+                            left: -3px;
+                        }
+
+                        #nav__resume-text {
+                            position: absolute;
+                            left: -3px;
+                        }
+
+                    }
+
+                    .active-pageIndicator,
+                    a:hover {
+                        color: $hoverColor;
+                        border-radius: 20%;
+                        background-color: rgba(59, 58, 53, 0.041);
+                        transform: scale(1.5);
+                    }
                 }
             }
         }
     }
 
+
     .Home {
-        margin-top: 6em;
-        position: relative;
+        @include MQ(L) {
+            position: relative;
+            .home__card-wrapper {
+                background-color: wheat;
+                border-radius: 2%;
+                display: flex;
+                justify-content: space-around;
+                margin-top: 2em;
+                .home__card-photo {
+                    display: block;
+                    p {
+                        font-family: 'Redressed', cursive;
+                        text-align: center;
+                        font-size: 35px;
+                        transition: transform 1s;
+                        overflow: hidden;
+                    }
+                    p:hover {
+                        cursor: grab;
+                        transform: scale(1.2);
+                    }
 
-        .home__card-wrapper {
-            background-color: wheat;
-            border-radius: 2%;
-            display: flex;
-            justify-content: space-around;
 
+                    img {
+                        border-radius: 50%;
+                        width: 250px;
+                        height: 250px;
+                        transition: transform 0.5s;
+                    }
+
+                    img:hover {
+                        cursor: grab;
+                        transform: translateY(-20px);
+                        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.185), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    }
+
+                    .background-bubbles {
+                        display: block;
+
+                        .background-bubble1 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(255, 0, 0, 0.246);
+                            left: 10%;
+                            bottom: 1%;
+                            padding: 120px;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble1:hover {
+                            transform: translateX(-10px);
+                        }
+
+                        .background-bubble2 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(0, 0, 255, 0.219);
+                            padding: 120px;
+                            left: 70%;
+                            bottom: 1%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble2:hover {
+                            transform: translateX(-10px);
+
+                        }
+
+                        .background-bubble3 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(23, 139, 110, 0.219);
+                            padding: 120px;
+                            right: 90%;
+                            bottom: 40%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble3:hover {
+                            transform: scale(1.1);
+                        }
+
+                        .background-bubble4 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(94, 94, 194, 0.219);
+                            padding: 120px;
+                            left: 90%;
+                            bottom: 40%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble4:hover {
+                            transform: scale(1.1);
+                        }
+
+                        .background-bubble5 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(26, 110, 179, 0.219);
+                            padding: 120px;
+                            left: 80%;
+                            bottom: 60%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble5:hover {
+                            transform: translate(10px);
+                        }
+
+                        .background-bubble6 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(207, 21, 21, 0.219);
+                            padding: 120px;
+                            right: 5%;
+                            bottom: 90%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble6:hover {
+                            transform: translateX(20px);
+                        }
+
+                        .background-bubble7 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(255, 255, 255, 0.219);
+                            padding: 120px;
+                            right: 80%;
+                            bottom: 80%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble7:hover {
+                            transform: translateX(20px);
+                        }
+
+                        .background-bubble8 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(255, 255, 255, 0.219);
+                            padding: 120px;
+                            right: 80%;
+                            bottom: 1%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble8:hover {
+                            transform: translateX(20px);
+                        }
+
+                        .background-bubble9 {
+                            border-radius: 50%;
+                            position: absolute;
+                            background: rgba(255, 255, 255, 0.219);
+                            padding: 120px;
+                            left: 90%;
+                            right: 1%;
+                            bottom: 1%;
+                            transition: transform 0.5s;
+                        }
+
+                        .background-bubble9:hover {
+                            transform: translateY(-20px);
+                        }
+                    }
+                }
+                .home__card-contents {
+                    display: flex;
+                    flex-direction: column;
+                    margin: 2em;
+                    .home__card-aboutMe {
+                        padding: 1em;
+                        transition: transform 1s;
+                        flex: 1;
+                        background-color: antiquewhite;
+
+                        li {
+                            margin-top: 5px;
+                        }
+
+                        .aboutMe__intro {
+                            font-family: 'Redressed', cursive;
+                            padding-top: 1em;
+                            display: flex;
+                            flex-direction: column;
+                            width: 400px;
+
+                            h3 {
+                                font-size: 50px;
+                                text-align: center;
+                                overflow: hidden; /* Ensures the content is not revealed until the animation */
+                                border-right: .15em solid orange; /* The typwriter cursor */
+                                white-space: nowrap; /* Keeps the content on a single line */
+                                margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+                                letter-spacing: .15em; /* Adjust as needed */
+                                animation: 
+                                typing 1.5s steps(40, end),
+                                blink-caret .75s step-end infinite; /* The typing effect */
+
+                                .aboutMe__textColor-Me {
+                                    color: rgb(255, 175, 1);
+                            }
+                            }
+
+                            p {
+                                font-size: 20px;
+                                padding: 1em;
+                                display: block;
+                                text-align: justify;
+                            }
+                            @keyframes typing {
+                                from { width: 0 }
+                                to { width: 60% }
+                            }
+                            
+                            /* The typewriter cursor effect */
+                            @keyframes blink-caret {
+                                from, to { border-color: transparent }
+                                50% { border-color: orange; }
+                            }
+                        }
+
+                        .aboutMe__contact {
+                            font-size: 20px;
+                            padding: 2em;
+
+                            .aboutMe__contact-ul {
+                                list-style: none;
+
+                                .aboutMe__contact-li {
+                                    h3 {
+                                        color: rgb(255, 94, 1);
+                                        font-weight: 300;
+                                    }
+                                }
+                            }
+                        }
+
+                    }
+
+                    .home__card-aboutMe:hover {
+                        cursor: grab;
+                        transform: translateX(-40px);
+                    }
+
+                    .home__card-myInfo {
+                        position: relative;
+                        flex: 2;
+                        display: flex;
+                        flex-direction: column;
+                        background-color: rgba(0, 0, 0, 0.096);
+                        transition: transform 1s;
+
+                        hr {
+                            border-top: 3px dashed rgb(82, 68, 68);
+                        }
+
+                        .myInfo__fullName {
+                            top: 9px;
+                            left: 40px;
+                            position: absolute;
+                            font-family: 'Redressed', cursive;
+                            text-align: center;
+                            font-size: 3em;
+                            
+                        }
+
+                        .myInfo__socialMedia {
+                            margin-top: 1em;
+                            margin-left: 15em;
+                            margin-right: 1em;
+                            margin-bottom: 20px;
+
+                            .myInfo__socialMedia-ul {
+                                list-style: none;
+                                display: flex;
+                                justify-content: space-evenly;
+
+                                .myInfo__socialMedia-li {
+                                    align-self: center;
+                                    padding: 0.3em;
+                                    background-color: wheat;
+                                    border-radius: 50%;
+                                }
+
+                                .myInfo__socialMedia-li:hover {
+                                    /* Start the shake animation and make the animation last for 0.5 seconds */
+                                    animation: shake 0.5s;
+                                    animation-iteration-count: 1;
+
+                                }
+
+                                @keyframes shake {
+                                    0% {
+                                        transform: translate(1px, 4px)
+                                    }
+
+                                    10% {
+                                        transform: translate(-1px, 4px)
+                                    }
+
+                                    20% {
+                                        transform: translate(3px, 4px)
+                                    }
+
+                                    30% {
+                                        transform: translate(-3px, 4px)
+                                    }
+
+                                    40% {
+                                        transform: translate(1px, 4px)
+                                    }
+
+                                    50% {
+                                        transform: translate(-1px, 4px)
+                                    }
+                                }
+                            }
+                        }
+
+                        .myInfo__occupations {
+                            align-self: center;
+                            display: flex;
+                            flex-direction: column;
+                            text-align: justify;
+                            list-style: none;
+
+                            ul {
+                                font-size: 30px;
+                                font-family: 'Redressed', cursive;
+                                text-align: justify;
+                                line-height: 2em;
+                                display: flex;
+
+                                p {
+                                    padding-left: 0.8em;
+                                }
+                            }
+                        }
+                    }
+
+                    .home__card-myInfo:hover {
+                        cursor: grab;
+                        transform: translateX(40px);
+                    }
+                }
+            }
+        }
+
+        @include MQ(S) {
             .home__card-photo {
-                img {
-                    position: absolute;
-                    top: 20%;
-                    width: auto;
-                    height: 350px;
-                    transition: transform 1s;
-                }
+                display: none;
+            }
 
-                img:hover {
-                    transform: translateY(-20px);
-                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.185), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                }
+            .background-bubbles {
+                display: none;
             }
 
             .home__card-contents {
+                position: relative;
+                right: 10%;
+                top: 1px;
                 display: flex;
                 flex-direction: column;
-                justify-content: space-around;
 
                 .home__card-aboutMe {
-                    transition: transform 1s;
-                    flex: 1;
                     background-color: antiquewhite;
+
+                    li {
+                        margin-top: 5px;
+                    }
 
                     .aboutMe__intro {
                         font-family: 'Redressed', cursive;
                         padding-top: 1em;
                         display: flex;
                         flex-direction: column;
-                        width: 400px;
 
-                        // position: absolute;
                         h3 {
-                            font-size: 40px;
+                            font-size: 20px;
                             text-align: center;
 
                             .aboutMe__textColor-Me {
                                 color: rgb(255, 175, 1);
                             }
                         }
+
                         p {
-                            font-size: 20px;
+                            font-size: 15px;
                             padding: 1em;
                             display: block;
                             text-align: justify;
@@ -150,30 +573,25 @@ $homeCardWrapperMarginTop : 2em;
                     }
 
                     .aboutMe__contact {
-                        padding: 2em;
+                        font-size: 15px;
+                        padding: 1em;
+
                         .aboutMe__contact-ul {
                             list-style: none;
 
                             .aboutMe__contact-li {
-                                display: flex;
-                                justify-content: space-between;
-
                                 h3 {
                                     color: rgb(255, 94, 1);
                                     font-weight: 300;
                                 }
-
                             }
                         }
                     }
 
                 }
 
-                .home__card-aboutMe:hover {
-                    transform: translateX(-40px);
-                }
-
                 .home__card-myInfo {
+                    position: relative;
                     flex: 2;
                     display: flex;
                     flex-direction: column;
@@ -185,18 +603,14 @@ $homeCardWrapperMarginTop : 2em;
                     }
 
                     .myInfo__fullName {
+                        top: 9px;
+                        left: 40px;
                         font-family: 'Redressed', cursive;
                         text-align: center;
                         font-size: 3em;
-                        width: 400px;
-                        margin-bottom: 10px;
                     }
 
                     .myInfo__socialMedia {
-                        margin-left: 5em;
-                        margin-right: 5em;
-                        margin-bottom: 20px;
-
                         .myInfo__socialMedia-ul {
                             list-style: none;
                             display: flex;
@@ -207,39 +621,6 @@ $homeCardWrapperMarginTop : 2em;
                                 padding: 0.3em;
                                 background-color: wheat;
                                 border-radius: 50%;
-                            }
-
-                            .myInfo__socialMedia-li:hover {
-                                /* Start the shake animation and make the animation last for 0.5 seconds */
-                                animation: shake 0.5s;
-                                animation-iteration-count: 1;
-
-                            }
-
-                            @keyframes shake {
-                                0% {
-                                    transform: translate(1px, 4px)
-                                }
-
-                                10% {
-                                    transform: translate(-1px, 4px)
-                                }
-
-                                20% {
-                                    transform: translate(3px, 4px)
-                                }
-
-                                30% {
-                                    transform: translate(-3px, 4px)
-                                }
-
-                                40% {
-                                    transform: translate(1px, 4px)
-                                }
-
-                                50% {
-                                    transform: translate(-1px, 4px)
-                                }
                             }
                         }
                     }
@@ -252,7 +633,7 @@ $homeCardWrapperMarginTop : 2em;
                         list-style: none;
 
                         ul {
-                            font-size: 30px;
+                            font-size: 25px;
                             font-family: 'Redressed', cursive;
                             text-align: justify;
                             line-height: 2em;
@@ -264,50 +645,527 @@ $homeCardWrapperMarginTop : 2em;
                         }
                     }
                 }
+            }
 
-                .home__card-myInfo:hover {
-                    transform: translateX(40px);
+        }
+    }
+
+    .Resume {
+        @include MQ(L) {
+            text-align: center;
+            background: rgba(240, 240, 240, 0.486);
+
+            h2 {
+                background: rgb(238, 174, 202);
+                background: radial-gradient(circle, rgba(238, 174, 202, 1) 0%, rgba(186, 148, 233, 1) 100%);
+                margin: 10px 0 10px 0;
+                font-size: 40px;
+            }
+
+            .resume__slide-education {
+                display: flex;
+                flex-direction: column;
+
+                .resume__education-wrapper {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    margin: 4em;
+
+                    .resume__education-school {
+                        margin-bottom: 1em;
+                        display: block;
+                        padding: 4em;
+                        height: 300px;
+                        width: 500px;
+
+                        h4 {
+                            color: rgb(248, 248, 248);
+                        }
+
+                        h3 {
+                            margin: 10px;
+                        }
+                    }
+
+                    img {
+                        border-radius: 50%;
+                    }
+
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-around;
+                        list-style: none;
+
+                        li {
+                            margin: 5px;
+
+                        }
+                    }
+
+                    .education__school-uq {
+                        background-image: url(../images/uq.jpg);
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .education__school-qut {
+                        background-image: url(../images/qut.png);
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .education__school-siit {
+                        background-image: url(../images/siit.png);
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .education__school-asbl {
+                        background-image: url(../images/asbl.png);
+                        background-size: cover;
+                        background-position: center;
+                    }
+
+                    .education__school-mask {
+                        color: aliceblue;
+                        border-radius: 10%;
+                        background-color: rgba(27, 26, 26, 0.582);
+                        transition: transform 2s;
+                    }
+
+                    .education__school-mask:hover {
+                        border-radius: 0%;
+                        transform: scale(1.28) translateY(-20px);
+                    }
+
+                }
+            }
+
+            .resume__slide-skills {
+                display: flex;
+                flex-direction: column;
+
+                .resume__skills-wrapper {
+                    margin: 0 5em 0 5em;
+                    padding: 1em;
+                    background: rgb(131, 58, 180);
+                    background: linear-gradient(90deg, rgba(131, 58, 180, 1) 0%, rgba(0, 0, 0, 1) 50%, rgba(252, 176, 69, 1) 100%);
+
+                    ul {
+                        list-style: none;
+
+                        h4 {
+                            font-weight: 300;
+                            font-size: 30px;
+                            color: rgb(251, 0, 167);
+                        }
+
+                        li {
+                            margin: 20px 0;
+
+                            h5 {
+                                color: wheat;
+                                font-size: larger;
+                            }
+
+                            .bar {
+                                margin: 0 20em 0 20em;
+                                background: rgba(0, 0, 0, 0.178);
+                                display: block;
+                                height: 10px;
+                                border-radius: 3px;
+                                overflow: hidden;
+                                box-shadow: 0 0 10px rgb(190, 240, 198);
+
+                                .span-programming {
+                                    height: 20px;
+                                    float: left;
+                                    background: rgb(234, 251, 4);
+                                }
+
+                                .span-db {
+                                    height: 20px;
+                                    float: left;
+                                    background: rgb(227, 236, 226);
+                                }
+
+                                .span-front {
+                                    height: 20px;
+                                    float: left;
+                                    background: rgb(24, 241, 0);
+                                }
+
+                                .span-libs {
+                                    height: 20px;
+                                    float: left;
+                                    background: rgb(255, 1, 1);
+                                }
+
+                                .span-tools {
+                                    height: 20px;
+                                    float: left;
+                                    background: rgb(1, 242, 250);
+                                }
+                            }
+
+                            .python {
+                                width: 50%;
+                                animation: python 2s;
+                            }
+
+                            @keyframes python {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 50%;
+                                }
+                            }
+
+                            .java {
+                                width: 60%;
+                                animation: java 2s;
+                            }
+
+                            @keyframes java {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 60%;
+                                }
+                            }
+
+                            .php {
+                                width: 30%;
+                                animation: php 2s;
+                            }
+
+                            @keyframes php {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 30%;
+                                }
+                            }
+
+                            .js {
+                                width: 50%;
+                                animation: js 2s;
+                            }
+
+                            @keyframes js {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 50%;
+                                }
+                            }
+
+                            .sql {
+                                width: 80%;
+                                animation: sql 2s;
+                            }
+
+                            @keyframes sql {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 80%;
+                                }
+                            }
+
+                            .nosql {
+                                width: 40%;
+                                animation: nosql 2s;
+                            }
+
+                            @keyframes nosql {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 40%;
+                                }
+                            }
+
+                            .html {
+                                width: 90%;
+                                animation: html 2s;
+                            }
+
+                            @keyframes html {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 90%;
+                                }
+                            }
+
+                            .css {
+                                width: 80%;
+                                animation: css 2s;
+                            }
+
+                            @keyframes css {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 80%;
+                                }
+                            }
+
+                            .ts {
+                                width: 10%;
+                                animation: ts 2s;
+                            }
+
+                            @keyframes ts {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 10%;
+                                }
+                            }
+
+                            .bootstrap {
+                                width: 70%;
+                                animation: bootstrap 2s;
+                            }
+
+                            @keyframes bootstrap {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 70%;
+                                }
+                            }
+
+                            .ci {
+                                width: 50%;
+                                animation: ci 2s;
+                            }
+
+                            @keyframes ci {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 50%;
+                                }
+                            }
+
+                            .react {
+                                width: 20%;
+                                animation: react 2s;
+                            }
+
+                            @keyframes react {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 20%;
+                                }
+                            }
+
+                            .node {
+                                width: 10%;
+                                animation: node 2s;
+                            }
+
+                            @keyframes node {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 10%;
+                                }
+                            }
+
+                            .git {
+                                width: 60%;
+                                animation: git 2s;
+                            }
+
+                            @keyframes git {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 60%;
+                                }
+                            }
+
+                            .xd {
+                                width: 80%;
+                                animation: xd 2s;
+                            }
+
+                            @keyframes xd {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 80%;
+                                }
+                            }
+
+                            .ai {
+                                width: 40%;
+                                animation: ai 2s;
+                            }
+
+                            @keyframes ai {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 40%;
+                                }
+                            }
+
+                            .ps {
+                                width: 30%;
+                                animation: ps 2s;
+                            }
+
+                            @keyframes ps {
+                                0% {
+                                    width: 0%;
+                                }
+
+                                100% {
+                                    width: 30%;
+                                }
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .resume__slide-professional {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+
+                ul {
+                    list-style: none;
                 }
 
+                .resume__professional-wrapper {
+                    display: flex;
+                }
+
+                .blur {
+                    filter: blur(8px);
+                }
+
+                .resume__professional-org {
+                    margin-bottom: 1em;
+                    display: block;
+                    padding: 4em;
+                    height: 300px;
+                    width: 500px;
+
+                    h4 {
+                        color: rgb(248, 248, 248);
+                    }
+
+                    h3 {
+                        margin: 10px;
+                    }
+
+                    .professional__org-mask {
+                        padding: 1em;
+                        background: rgb(251, 63, 174);
+                        background: radial-gradient(circle, rgba(251, 63, 174, 1) 0%, rgba(115, 70, 252, 0.38699229691876746) 100%);
+                        transition: transform 1s;
+                    }
+
+                    .professional__org-mask:hover {
+                        transform: scale(1.1);
+                    }
+
+                }
+
+                .org__goldenLakes-popup {
+                    .professional__org-mask {
+                        background: rgb(251, 63, 174);
+                        background: radial-gradient(circle, rgba(251, 63, 174, 1) 0%, rgba(115, 70, 252, 0.38699229691876746) 100%);
+
+                    }
+
+                    display: none;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 20%;
+                    width: 50%;
+                    font-size: 2em;
+                }
+
+                .org__space-popup {
+                    .professional__org-mask {
+                        background: rgb(251, 63, 174);
+                        background: radial-gradient(circle, rgba(251, 63, 174, 1) 0%, rgba(115, 70, 252, 0.38699229691876746) 100%);
+
+                    }
+
+                    display: none;
+                    position: absolute;
+                    bottom: 40%;
+                    left: 20%;
+                    width: 50%;
+                    font-size: 2em;
+
+                }
             }
 
         }
 
-    }
+        @include MQ(S) {}
 
-    .Resume {
-        border-radius: 2%;
-        text-align: center;
-        margin-top: 6em;
-        background: rgb(192, 142, 142);
     }
 
     .Projects {
-        // padding: 1em;
         text-align: center;
-        margin-top: 6em;
-        background: rgb(27, 149, 88);
+        background: rgba(240, 240, 240, 0.486);
     }
 
     .Blog {
-        // padding: 1em;
         text-align: center;
-        margin-top: 6em;
-        background: rgb(24, 97, 165);
+        background: rgba(240, 240, 240, 0.486);
     }
 
     .contactMe {
-        // padding: 1em;
         text-align: center;
-        margin-top: 6em;
-        background: rgb(145, 61, 214);
+        background: rgba(240, 240, 240, 0.486);
     }
-
-    .desktop-footer {
-        text-align: center;
-        background-color: antiquewhite;
-        padding: 1em;
-    }
-
 
 }
