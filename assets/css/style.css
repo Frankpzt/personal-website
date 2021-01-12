@@ -111,811 +111,732 @@
     transform: scale(1.5);
   }
 }
-@media only screen and (min-width: 1200px) {
-  .body__desktop .Home {
-    position: relative;
-  }
-  .body__desktop .Home .home__card-wrapper {
-    background-color: wheat;
-    border-radius: 2%;
-    display: flex;
-    justify-content: space-around;
-    margin-top: 2em;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo {
-    display: block;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo p {
-    font-family: "Redressed", cursive;
-    text-align: center;
-    font-size: 35px;
-    transition: transform 1s;
-    overflow: hidden;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo p:hover {
-    cursor: grab;
-    transform: scale(1.2);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo img {
-    border-radius: 50%;
-    width: 250px;
-    height: 250px;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo img:hover {
-    cursor: grab;
-    transform: translateY(-20px);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.185), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles {
-    display: block;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble1 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(255, 0, 0, 0.246);
-    left: 10%;
-    bottom: 1%;
-    padding: 120px;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble1:hover {
-    transform: translateX(-10px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble2 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(0, 0, 255, 0.219);
-    padding: 120px;
-    left: 70%;
-    bottom: 1%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble2:hover {
-    transform: translateX(-10px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble3 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(23, 139, 110, 0.219);
-    padding: 120px;
-    right: 90%;
-    bottom: 40%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble3:hover {
-    transform: scale(1.1);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble4 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(94, 94, 194, 0.219);
-    padding: 120px;
-    left: 90%;
-    bottom: 40%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble4:hover {
-    transform: scale(1.1);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble5 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(26, 110, 179, 0.219);
-    padding: 120px;
-    left: 80%;
-    bottom: 60%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble5:hover {
-    transform: translate(10px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble6 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(207, 21, 21, 0.219);
-    padding: 120px;
-    right: 5%;
-    bottom: 90%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble6:hover {
-    transform: translateX(20px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble7 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.219);
-    padding: 120px;
-    right: 80%;
-    bottom: 80%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble7:hover {
-    transform: translateX(20px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble8 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.219);
-    padding: 120px;
-    right: 80%;
-    bottom: 1%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble8:hover {
-    transform: translateX(20px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble9 {
-    border-radius: 50%;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.219);
-    padding: 120px;
-    left: 90%;
-    right: 1%;
-    bottom: 1%;
-    transition: transform 0.5s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-photo .background-bubbles .background-bubble9:hover {
-    transform: translateY(-20px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents {
-    display: flex;
-    flex-direction: column;
-    margin: 2em;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe {
-    padding: 1em;
-    transition: transform 1s;
-    flex: 1;
-    background-color: antiquewhite;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe li {
-    margin-top: 5px;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro {
-    font-family: "Redressed", cursive;
-    padding-top: 1em;
-    display: flex;
-    flex-direction: column;
-    width: 400px;
-    /* The typewriter cursor effect */
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro h3 {
-    font-size: 50px;
-    text-align: center;
-    overflow: hidden;
-    /* Ensures the content is not revealed until the animation */
-    border-right: 0.15em solid orange;
-    /* The typwriter cursor */
-    white-space: nowrap;
-    /* Keeps the content on a single line */
-    margin: 0 auto;
-    /* Gives that scrolling effect as the typing happens */
-    letter-spacing: 0.15em;
-    /* Adjust as needed */
-    animation: typing 1.5s steps(40, end), blink-caret 0.75s step-end infinite;
-    /* The typing effect */
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro h3 .aboutMe__textColor-Me {
-    color: #ffaf01;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__intro p {
-    font-size: 20px;
-    padding: 1em;
-    display: block;
-    text-align: justify;
-  }
-  @keyframes typing {
-    from {
-      width: 0;
-    }
-    to {
-      width: 60%;
-    }
-  }
-  @keyframes blink-caret {
-    from, to {
-      border-color: transparent;
-    }
-    50% {
-      border-color: orange;
-    }
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact {
-    font-size: 20px;
-    padding: 2em;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul {
-    list-style: none;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul .aboutMe__contact-li h3 {
-    color: #ff5e01;
-    font-weight: 300;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-aboutMe:hover {
-    cursor: grab;
-    transform: translateX(-40px);
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo {
-    position: relative;
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.096);
-    transition: transform 1s;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo hr {
-    border-top: 3px dashed #524444;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__fullName {
-    top: 9px;
-    left: 40px;
-    position: absolute;
-    font-family: "Redressed", cursive;
-    text-align: center;
-    font-size: 3em;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia {
-    margin-top: 1em;
-    margin-left: 15em;
-    margin-right: 1em;
-    margin-bottom: 20px;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul .myInfo__socialMedia-li {
-    align-self: center;
-    padding: 0.3em;
-    background-color: wheat;
-    border-radius: 50%;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul .myInfo__socialMedia-li:hover {
-    /* Start the shake animation and make the animation last for 0.5 seconds */
-    animation: shake 0.5s;
-    animation-iteration-count: 1;
-  }
-  @keyframes shake {
-    0% {
-      transform: translate(1px, 4px);
-    }
-    10% {
-      transform: translate(-1px, 4px);
-    }
-    20% {
-      transform: translate(3px, 4px);
-    }
-    30% {
-      transform: translate(-3px, 4px);
-    }
-    40% {
-      transform: translate(1px, 4px);
-    }
-    50% {
-      transform: translate(-1px, 4px);
-    }
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__occupations {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    list-style: none;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__occupations ul {
-    font-size: 30px;
-    font-family: "Redressed", cursive;
-    text-align: justify;
-    line-height: 2em;
-    display: flex;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo .myInfo__occupations ul p {
-    padding-left: 0.8em;
-  }
-  .body__desktop .Home .home__card-wrapper .home__card-contents .home__card-myInfo:hover {
-    cursor: grab;
-    transform: translateX(40px);
-  }
+.body__desktop .Home .background-bubbles {
+  display: block;
 }
-@media only screen and (min-width: 375px) {
-  .body__desktop .Home .home__card-photo {
-    display: none;
-  }
-  .body__desktop .Home .background-bubbles {
-    display: none;
-  }
-  .body__desktop .Home .home__card-contents {
-    position: relative;
-    right: 10%;
-    top: 1px;
-    display: flex;
-    flex-direction: column;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe {
-    background-color: antiquewhite;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe li {
-    margin-top: 5px;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__intro {
-    font-family: "Redressed", cursive;
-    padding-top: 1em;
-    display: flex;
-    flex-direction: column;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__intro h3 {
-    font-size: 20px;
-    text-align: center;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__intro h3 .aboutMe__textColor-Me {
-    color: #ffaf01;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__intro p {
-    font-size: 15px;
-    padding: 1em;
-    display: block;
-    text-align: justify;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__contact {
-    font-size: 15px;
-    padding: 1em;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul {
-    list-style: none;
-  }
-  .body__desktop .Home .home__card-contents .home__card-aboutMe .aboutMe__contact .aboutMe__contact-ul .aboutMe__contact-li h3 {
-    color: #ff5e01;
-    font-weight: 300;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo {
-    position: relative;
-    flex: 2;
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.096);
-    transition: transform 1s;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo hr {
-    border-top: 3px dashed #524444;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo .myInfo__fullName {
-    top: 9px;
-    left: 40px;
-    font-family: "Redressed", cursive;
-    text-align: center;
-    font-size: 3em;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul .myInfo__socialMedia-li {
-    align-self: center;
-    padding: 0.3em;
-    background-color: wheat;
-    border-radius: 50%;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo .myInfo__occupations {
-    align-self: center;
-    display: flex;
-    flex-direction: column;
-    text-align: justify;
-    list-style: none;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo .myInfo__occupations ul {
-    font-size: 25px;
-    font-family: "Redressed", cursive;
-    text-align: justify;
-    line-height: 2em;
-    display: flex;
-  }
-  .body__desktop .Home .home__card-contents .home__card-myInfo .myInfo__occupations ul p {
-    padding-left: 0.8em;
-  }
+.body__desktop .Home .background-bubbles .background-bubble1 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(255, 0, 0, 0.246);
+  left: 10%;
+  bottom: 1%;
+  padding: 120px;
+  transition: transform 0.5s;
 }
-@media only screen and (min-width: 1200px) {
-  .body__desktop .Resume {
-    text-align: center;
-    background: rgba(240, 240, 240, 0.486);
+.body__desktop .Home .background-bubbles .background-bubble1:hover {
+  transform: translateX(-10px);
+}
+.body__desktop .Home .background-bubbles .background-bubble2 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(0, 0, 255, 0.219);
+  padding: 120px;
+  left: 70%;
+  bottom: 1%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble2:hover {
+  transform: translateX(-10px);
+}
+.body__desktop .Home .background-bubbles .background-bubble3 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(23, 139, 110, 0.219);
+  padding: 120px;
+  right: 90%;
+  bottom: 40%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble3:hover {
+  transform: scale(1.1);
+}
+.body__desktop .Home .background-bubbles .background-bubble4 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(94, 94, 194, 0.219);
+  padding: 120px;
+  left: 90%;
+  bottom: 40%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble4:hover {
+  transform: scale(1.1);
+}
+.body__desktop .Home .background-bubbles .background-bubble5 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(26, 110, 179, 0.219);
+  padding: 120px;
+  left: 80%;
+  bottom: 60%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble5:hover {
+  transform: translate(10px);
+}
+.body__desktop .Home .background-bubbles .background-bubble6 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(207, 21, 21, 0.219);
+  padding: 120px;
+  right: 5%;
+  bottom: 90%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble6:hover {
+  transform: translateX(20px);
+}
+.body__desktop .Home .background-bubbles .background-bubble7 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.219);
+  padding: 120px;
+  right: 80%;
+  bottom: 80%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble7:hover {
+  transform: translateX(20px);
+}
+.body__desktop .Home .background-bubbles .background-bubble8 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.219);
+  padding: 120px;
+  right: 80%;
+  bottom: 1%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble8:hover {
+  transform: translateX(20px);
+}
+.body__desktop .Home .background-bubbles .background-bubble9 {
+  border-radius: 50%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.219);
+  padding: 120px;
+  left: 90%;
+  right: 1%;
+  bottom: 1%;
+  transition: transform 0.5s;
+}
+.body__desktop .Home .background-bubbles .background-bubble9:hover {
+  transform: translateY(-20px);
+}
+.body__desktop .Home .home__card {
+  padding: 2em;
+  margin: 0 10%;
+  background: wheat;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-evenly;
+}
+.body__desktop .Home .home__card .home__card-profile {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.body__desktop .Home .home__card .home__card-profile img {
+  margin: 1em;
+  flex: 1;
+  width: 200px;
+  height: 200px;
+  border-radius: 5px;
+  align-self: center;
+  transition: transform 1s;
+  animation: fadeInLeft 2s;
+}
+.body__desktop .Home .home__card .home__card-profile img:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 0px 10px 0px rgba(8, 8, 8, 0.445);
+}
+.body__desktop .Home .home__card .home__card-profile p {
+  font-family: "Amatic SC", cursive;
+  font-size: 30px;
+  margin: 1em 2em 7em 2em;
+  padding: 0.5em 0em 0.5em 0em;
+  border-radius: 50px;
+  text-align: center;
+  flex: 2;
+  transition: transform 1s;
+  animation: fadeInBottom 3s;
+}
+.body__desktop .Home .home__card .home__card-profile p:hover {
+  transform: scale(1.3);
+}
+.body__desktop .Home .home__card .home__card-contents {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  background: url(../images/bg/white_paperboard.png);
+  border-radius: 10px;
+}
+.body__desktop .Home .home__card .home__card-contents hr {
+  border-top: 2px dashed #00b7ff;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-aboutMe {
+  align-self: center;
+  flex: 2;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-aboutMe h3 {
+  width: 30%;
+  font-family: "Amatic SC", cursive;
+  font-size: 50px;
+  text-align: center;
+  overflow: hidden;
+  /* Ensures the content is not revealed until the animation */
+  border-right: 0.05em solid black;
+  /* The typwriter cursor */
+  white-space: nowrap;
+  /* Keeps the content on a single line */
+  margin: 0 auto;
+  /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 0.15em;
+  /* Adjust as needed */
+  animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+  /* The typewriter cursor effect */
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-aboutMe h3 .aboutMe__textColor-Me {
+  color: rgba(10, 109, 202, 0.582);
+}
+@keyframes typing {
+  from {
+    width: 0;
   }
-  .body__desktop .Resume h2 {
-    background: #eeaeca;
-    background: radial-gradient(circle, #eeaeca 0%, #ba94e9 100%);
-    margin: 10px 0 10px 0;
-    font-size: 40px;
+  to {
+    width: 15%;
   }
-  .body__desktop .Resume .resume__slide-education {
-    display: flex;
-    flex-direction: column;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin: 4em;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .resume__education-school {
-    margin-bottom: 1em;
-    display: block;
-    padding: 4em;
-    height: 300px;
-    width: 500px;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .resume__education-school h4 {
-    color: #f8f8f8;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .resume__education-school h3 {
-    margin: 10px;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper img {
-    border-radius: 50%;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper ul {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    list-style: none;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper ul li {
-    margin: 5px;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-uq {
-    background-image: url(../images/uq.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-qut {
-    background-image: url(../images/qut.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-siit {
-    background-image: url(../images/siit.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-asbl {
-    background-image: url(../images/asbl.png);
-    background-size: cover;
-    background-position: center;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-mask {
-    color: aliceblue;
-    border-radius: 10%;
-    background-color: rgba(27, 26, 26, 0.582);
-    transition: transform 2s;
-  }
-  .body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-mask:hover {
-    border-radius: 0%;
-    transform: scale(1.28) translateY(-20px);
-  }
-  .body__desktop .Resume .resume__slide-skills {
-    display: flex;
-    flex-direction: column;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper {
-    margin: 0 5em 0 5em;
-    padding: 1em;
-    background: #833ab4;
-    background: linear-gradient(90deg, #833ab4 0%, black 50%, #fcb045 100%);
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul {
-    list-style: none;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul h4 {
-    font-weight: 300;
-    font-size: 30px;
-    color: #fb00a7;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li {
-    margin: 20px 0;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li h5 {
-    color: wheat;
-    font-size: larger;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar {
-    margin: 0 20em 0 20em;
-    background: rgba(0, 0, 0, 0.178);
-    display: block;
-    height: 10px;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 0 10px #bef0c6;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-programming {
-    height: 20px;
-    float: left;
-    background: #eafb04;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-db {
-    height: 20px;
-    float: left;
-    background: #e3ece2;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-front {
-    height: 20px;
-    float: left;
-    background: #18f100;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-libs {
-    height: 20px;
-    float: left;
-    background: #ff0101;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-tools {
-    height: 20px;
-    float: left;
-    background: #01f2fa;
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .python {
-    width: 50%;
-    animation: python 2s;
-  }
-  @keyframes python {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 50%;
-    }
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .java {
-    width: 60%;
-    animation: java 2s;
-  }
-  @keyframes java {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 60%;
-    }
-  }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .php {
+  to {
     width: 30%;
-    animation: php 2s;
   }
-  @keyframes php {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 30%;
-    }
+}
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .js {
+  50% {
+    border-color: black;
+  }
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-aboutMe p {
+  color: rgba(10, 109, 202, 0.582);
+  font-size: 1.5em;
+  text-align: justify;
+  font-family: "Just Another Hand", cursive;
+  padding: 1em 1em 1em 1em;
+  animation: fadeInTop 3s;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo {
+  margin-bottom: 1em;
+  flex: 1;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__socialMedia {
+  display: flex;
+  animation: fadeInTop 2s;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__fullName {
+  flex: 2;
+  text-align: center;
+  font-family: "Just Another Hand", cursive;
+  font-size: 1.6em;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__socialMedia .myInfo__socialMedia-ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  flex: 2;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__socialMedia li:hover {
+  animation: shake 0.8s;
+  animation-iteration-count: infinite;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__occupations {
+  text-align: center;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  animation: fadeInBottom 2s;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__occupations .myInfo__occupations-row {
+  display: flex;
+  justify-content: space-around;
+  position: relative;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__occupations .myInfo__occupations-row li {
+  margin: 1em;
+  transition: transform 1s;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__occupations .myInfo__occupations-row li:hover {
+  transform: scale(1.3);
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__occupations .myInfo__occupations-row .occupations-row-translator {
+  position: absolute;
+  left: 100px;
+}
+.body__desktop .Home .home__card .home__card-contents .home__card-myInfo .myInfo__occupations .myInfo__occupations-row .occupations-row-marketing {
+  position: absolute;
+  right: 80px;
+}
+@keyframes fadeInTop {
+  0% {
+    transform: translateY(-900px);
+    display: none;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    transform: translateX(-900px);
+    display: none;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    transform: translateX(900px);
+    display: none;
+  }
+}
+@keyframes fadeInBottom {
+  0% {
+    transform: translateY(900px);
+    display: none;
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(-1deg);
+  }
+}
+.body__desktop .Resume {
+  text-align: center;
+  background: rgba(240, 240, 240, 0.486);
+}
+.body__desktop .Resume h2 {
+  background: #eeaeca;
+  background: radial-gradient(circle, #eeaeca 0%, #ba94e9 100%);
+  margin: 10px 0 10px 0;
+  font-size: 40px;
+}
+.body__desktop .Resume .resume__slide-education {
+  display: flex;
+  flex-direction: column;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 4em;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .resume__education-school {
+  margin-bottom: 1em;
+  display: block;
+  padding: 4em;
+  height: 200px;
+  width: 400px;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .resume__education-school h4 {
+  color: #f8f8f8;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .resume__education-school h3 {
+  margin: 10px;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper img {
+  border-radius: 50%;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  list-style: none;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper ul li {
+  margin: 5px;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-uq {
+  background-image: url(../images/uq.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-qut {
+  background-image: url(../images/qut.png);
+  background-size: cover;
+  background-position: center;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-siit {
+  background-image: url(../images/siit.png);
+  background-size: cover;
+  background-position: center;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-asbl {
+  background-image: url(../images/asbl.png);
+  background-size: cover;
+  background-position: center;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-mask {
+  font-size: 10px;
+  color: aliceblue;
+  border-radius: 10%;
+  background-color: rgba(27, 26, 26, 0.582);
+  transition: transform 2s;
+}
+.body__desktop .Resume .resume__slide-education .resume__education-wrapper .education__school-mask:hover {
+  border-radius: 0%;
+  transform: scale(1.28) translateY(-30px);
+}
+.body__desktop .Resume .resume__slide-skills {
+  display: flex;
+  flex-direction: column;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper {
+  margin: 0 5em 0 5em;
+  padding: 1em;
+  background: #833ab4;
+  background: linear-gradient(90deg, #833ab4 0%, black 50%, #fcb045 100%);
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul {
+  list-style: none;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul h4 {
+  font-weight: 300;
+  font-size: 15px;
+  color: #fb00a7;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li {
+  margin: 10px 0;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li h5 {
+  color: wheat;
+  font-size: larger;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar {
+  margin: 0 20em 0 20em;
+  background: rgba(0, 0, 0, 0.178);
+  display: block;
+  height: 10px;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0 10px #bef0c6;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-programming {
+  height: 20px;
+  float: left;
+  background: #eafb04;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-db {
+  height: 20px;
+  float: left;
+  background: #e3ece2;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-front {
+  height: 20px;
+  float: left;
+  background: #18f100;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-libs {
+  height: 20px;
+  float: left;
+  background: #ff0101;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bar .span-tools {
+  height: 20px;
+  float: left;
+  background: #01f2fa;
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .python {
+  width: 50%;
+  animation: python 2s;
+}
+@keyframes python {
+  0% {
+    width: 0%;
+  }
+  100% {
     width: 50%;
-    animation: js 2s;
   }
-  @keyframes js {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 50%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .java {
+  width: 60%;
+  animation: java 2s;
+}
+@keyframes java {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .sql {
+  100% {
+    width: 60%;
+  }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .php {
+  width: 30%;
+  animation: php 2s;
+}
+@keyframes php {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .js {
+  width: 50%;
+  animation: js 2s;
+}
+@keyframes js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 50%;
+  }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .sql {
+  width: 80%;
+  animation: sql 2s;
+}
+@keyframes sql {
+  0% {
+    width: 0%;
+  }
+  100% {
     width: 80%;
-    animation: sql 2s;
   }
-  @keyframes sql {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 80%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .nosql {
+  width: 40%;
+  animation: nosql 2s;
+}
+@keyframes nosql {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .nosql {
+  100% {
     width: 40%;
-    animation: nosql 2s;
   }
-  @keyframes nosql {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 40%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .html {
+  width: 90%;
+  animation: html 2s;
+}
+@keyframes html {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .html {
+  100% {
     width: 90%;
-    animation: html 2s;
   }
-  @keyframes html {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 90%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .css {
+  width: 80%;
+  animation: css 2s;
+}
+@keyframes css {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .css {
+  100% {
     width: 80%;
-    animation: css 2s;
   }
-  @keyframes css {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 80%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ts {
+  width: 10%;
+  animation: ts 2s;
+}
+@keyframes ts {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ts {
+  100% {
     width: 10%;
-    animation: ts 2s;
   }
-  @keyframes ts {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 10%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bootstrap {
+  width: 70%;
+  animation: bootstrap 2s;
+}
+@keyframes bootstrap {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .bootstrap {
+  100% {
     width: 70%;
-    animation: bootstrap 2s;
   }
-  @keyframes bootstrap {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 70%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ci {
+  width: 50%;
+  animation: ci 2s;
+}
+@keyframes ci {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ci {
+  100% {
     width: 50%;
-    animation: ci 2s;
   }
-  @keyframes ci {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 50%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .react {
+  width: 20%;
+  animation: react 2s;
+}
+@keyframes react {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .react {
+  100% {
     width: 20%;
-    animation: react 2s;
   }
-  @keyframes react {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 20%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .node {
+  width: 10%;
+  animation: node 2s;
+}
+@keyframes node {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .node {
+  100% {
     width: 10%;
-    animation: node 2s;
   }
-  @keyframes node {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 10%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .git {
+  width: 60%;
+  animation: git 2s;
+}
+@keyframes git {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .git {
+  100% {
     width: 60%;
-    animation: git 2s;
   }
-  @keyframes git {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 60%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .xd {
+  width: 80%;
+  animation: xd 2s;
+}
+@keyframes xd {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .xd {
+  100% {
     width: 80%;
-    animation: xd 2s;
   }
-  @keyframes xd {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 80%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ai {
+  width: 40%;
+  animation: ai 2s;
+}
+@keyframes ai {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ai {
+  100% {
     width: 40%;
-    animation: ai 2s;
   }
-  @keyframes ai {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 40%;
-    }
+}
+.body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ps {
+  width: 30%;
+  animation: ps 2s;
+}
+@keyframes ps {
+  0% {
+    width: 0%;
   }
-  .body__desktop .Resume .resume__slide-skills .resume__skills-wrapper ul li .ps {
+  100% {
     width: 30%;
-    animation: ps 2s;
   }
-  @keyframes ps {
-    0% {
-      width: 0%;
-    }
-    100% {
-      width: 30%;
-    }
-  }
-  .body__desktop .Resume .resume__slide-professional {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-  }
-  .body__desktop .Resume .resume__slide-professional ul {
-    list-style: none;
-  }
-  .body__desktop .Resume .resume__slide-professional .resume__professional-wrapper {
-    display: flex;
-  }
-  .body__desktop .Resume .resume__slide-professional .blur {
-    filter: blur(8px);
-  }
-  .body__desktop .Resume .resume__slide-professional .resume__professional-org {
-    margin-bottom: 1em;
-    display: block;
-    padding: 4em;
-    height: 300px;
-    width: 500px;
-  }
-  .body__desktop .Resume .resume__slide-professional .resume__professional-org h4 {
-    color: #f8f8f8;
-  }
-  .body__desktop .Resume .resume__slide-professional .resume__professional-org h3 {
-    margin: 10px;
-  }
-  .body__desktop .Resume .resume__slide-professional .resume__professional-org .professional__org-mask {
-    padding: 1em;
-    background: #fb3fae;
-    background: radial-gradient(circle, #fb3fae 0%, rgba(115, 70, 252, 0.3869922969) 100%);
-    transition: transform 1s;
-  }
-  .body__desktop .Resume .resume__slide-professional .resume__professional-org .professional__org-mask:hover {
-    transform: scale(1.1);
-  }
-  .body__desktop .Resume .resume__slide-professional .org__goldenLakes-popup {
-    display: none;
-    position: absolute;
-    bottom: 40%;
-    left: 20%;
-    width: 50%;
-    font-size: 2em;
-  }
-  .body__desktop .Resume .resume__slide-professional .org__goldenLakes-popup .professional__org-mask {
-    background: #fb3fae;
-    background: radial-gradient(circle, #fb3fae 0%, rgba(115, 70, 252, 0.3869922969) 100%);
-  }
-  .body__desktop .Resume .resume__slide-professional .org__space-popup {
-    display: none;
-    position: absolute;
-    bottom: 40%;
-    left: 20%;
-    width: 50%;
-    font-size: 2em;
-  }
-  .body__desktop .Resume .resume__slide-professional .org__space-popup .professional__org-mask {
-    background: #fb3fae;
-    background: radial-gradient(circle, #fb3fae 0%, rgba(115, 70, 252, 0.3869922969) 100%);
-  }
+}
+.body__desktop .Resume .resume__slide-professional {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+.body__desktop .Resume .resume__slide-professional ul {
+  list-style: none;
+}
+.body__desktop .Resume .resume__slide-professional .resume__professional-wrapper {
+  display: flex;
+}
+.body__desktop .Resume .resume__slide-professional .blur {
+  filter: blur(8px);
+}
+.body__desktop .Resume .resume__slide-professional .resume__professional-org {
+  margin-bottom: 1em;
+  display: block;
+  padding: 4em;
+  height: 300px;
+  width: 500px;
+}
+.body__desktop .Resume .resume__slide-professional .resume__professional-org h4 {
+  color: #0206fd;
+}
+.body__desktop .Resume .resume__slide-professional .resume__professional-org h3 {
+  margin: 10px;
+}
+.body__desktop .Resume .resume__slide-professional .resume__professional-org .professional__org-mask {
+  padding: 1em;
+  background: radial-gradient(circle, #f6f6f3 0%, rgba(175, 177, 165, 0.596) 100%);
+  transition: transform 1s;
+}
+.body__desktop .Resume .resume__slide-professional .resume__professional-org .professional__org-mask:hover {
+  transform: scale(1.1);
+}
+.body__desktop .Resume .resume__slide-professional .org__goldenLakes-popup {
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+  width: 50%;
+  font-size: 1.5em;
+}
+.body__desktop .Resume .resume__slide-professional .org__goldenLakes-popup .professional__org-mask {
+  background: radial-gradient(circle, #f6f6f3 0%, rgba(175, 177, 165, 0.596) 100%);
+}
+.body__desktop .Resume .resume__slide-professional .org__space-popup {
+  display: none;
+  position: absolute;
+  bottom: 40%;
+  left: 20%;
+  width: 50%;
+  font-size: 1.5em;
+}
+.body__desktop .Resume .resume__slide-professional .org__space-popup .professional__org-mask {
+  background: #fb3fae;
+  background: radial-gradient(circle, #fb3fae 0%, rgba(115, 70, 252, 0.3869922969) 100%);
+}
+.body__desktop .Resume .resume__slide-professional .hover-cancel {
+  padding: 1em;
+  background: radial-gradient(circle, #f6f6f3 0%, rgba(175, 177, 165, 0.596) 100%);
 }
 .body__desktop .Projects {
   text-align: center;
@@ -928,6 +849,52 @@
 .body__desktop .contactMe {
   text-align: center;
   background: rgba(240, 240, 240, 0.486);
+  /* Style inputs with type="text", select elements and textareas */
+  /* Style the submit button with a specific background color etc */
+  /* When moving the mouse over the submit button, add a darker green color */
+  /* Add a background color and some padding around the form */
+}
+.body__desktop .contactMe p {
+  margin: 1em 0 1em 0;
+  padding: 0 0 0 0;
+  font-size: 3em;
+  font-family: "Amatic SC", cursive;
+}
+.body__desktop .contactMe input[type=text],
+.body__desktop .contactMe select,
+.body__desktop .contactMe textarea {
+  width: 100%;
+  /* Full width */
+  padding: 12px;
+  /* Some padding */
+  border: 1px solid #ccc;
+  /* Gray border */
+  border-radius: 4px;
+  /* Rounded borders */
+  box-sizing: border-box;
+  /* Make sure that padding and width stays in place */
+  margin-top: 6px;
+  /* Add a top margin */
+  margin-bottom: 16px;
+  /* Bottom margin */
+  resize: vertical;
+}
+.body__desktop .contactMe input[type=submit] {
+  background-color: #05817b;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.body__desktop .contactMe input[type=submit]:hover {
+  background-color: #14bfc5;
+}
+.body__desktop .contactMe .container {
+  padding: 2em;
+  background-color: #f5e9e9;
+  border-radius: 5px;
+  margin: 0 20em;
 }
 
 /*# sourceMappingURL=style.css.map */
