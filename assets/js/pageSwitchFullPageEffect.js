@@ -15,7 +15,7 @@ new fullpage('#fullpage', {
     licenseKey: '24791606-92AB4851-BE66B309-10F019ED',
     autoScrolling: true,
     keyboardScrolling: true,
-    navigation: true,
+    // navigation: true,
     anchors: ['anchor-home', 'anchor-resume', 'anchor-projects', 'anchor-blog', 'anchor-contactMe'],
     // navigationTooltips: ['About Me', 'My Resume', 'Personal Projects', 'Blog', 'Contact Me'],
     /*
