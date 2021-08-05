@@ -766,6 +766,22 @@ $L: 1200px;
                 }
             }
         }
+        .home__card-wechatQR {
+            display: none;
+            position: absolute;
+            left: 50%;
+            margin-left: -127.5px;
+            top:50%;
+            margin-top: -127.5px;
+            img {
+                height: 255px;
+                width: 255px;
+            }
+            
+        }
+        .blur {
+            filter: blur(8px);
+        }
     }
 
     .Resume {

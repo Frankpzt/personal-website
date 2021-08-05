@@ -635,6 +635,21 @@
     transform: translate(1px, -2px) rotate(-1deg);
   }
 }
+.body__desktop .Home .home__card-wechatQR {
+  display: none;
+  position: absolute;
+  left: 50%;
+  margin-left: -127.5px;
+  top: 50%;
+  margin-top: -127.5px;
+}
+.body__desktop .Home .home__card-wechatQR img {
+  height: 255px;
+  width: 255px;
+}
+.body__desktop .Home .blur {
+  filter: blur(8px);
+}
 .body__desktop .Resume {
   text-align: center;
   background: rgba(240, 240, 240, 0.486);

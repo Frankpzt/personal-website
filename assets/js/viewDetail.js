@@ -22,6 +22,19 @@ document.getElementById('org__space-popup').addEventListener("click", function v
 
 });
 
+document.getElementById('weChat').addEventListener("click", function viewDetail(){
+    document.getElementById('home__card-wechatQR').style.display = 'block'
+    document.getElementById('home__card').classList.add('blur')
+
+});
+
+document.getElementById('home__card-wechatQR').addEventListener("click", function viewDetail(){
+    document.getElementById('home__card-wechatQR').style.display = 'none'
+    document.getElementById('home__card').classList.remove('blur')
+
+});
+
+
 /* try to let user to turn-off the popup by clicking anywhere in the browser but failed, wish someone can help me*/
 
 // document.addEventListener("click", function viewDetail(){
